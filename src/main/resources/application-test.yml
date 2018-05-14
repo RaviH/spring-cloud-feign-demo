@@ -1,0 +1,35 @@
+ribbon:
+  eureka:
+    enabled: false
+
+eureka:
+  client:
+    fetchRegistry: false
+    register-with-eureka: false
+
+feign:
+  hystrix:
+    enabled: false
+
+spring:
+  boot:
+    enableautoconfiguration: true
+  cloud:
+    discovery:
+      enabled: false
+
+demoservice:
+  ribbon:
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: http://localhost:8090
+    ListOfServers: http://localhost:8090
+    eureka:
+      enabled: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMillisecond: 999999
