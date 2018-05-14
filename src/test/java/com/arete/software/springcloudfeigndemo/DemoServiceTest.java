@@ -22,7 +22,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {
         SpringCloudFeignDemoConfig.class,
-        LocalRibbonClientConfiguration.class
+//        LocalRibbonClientConfiguration.class // Uncomment this to make the tests pass.
 })
 @TestPropertySource("classpath:application-test.yml")
 @ActiveProfiles("test")
